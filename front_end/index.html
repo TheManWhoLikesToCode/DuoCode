@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Create User Input Box -->
+    <input type="text" id="username" placeholder="Enter your username">
+    <button id="submit-btn">Submit</button>
+    <!-- Display Results -->
+    <div id="result"></div>
+    <script src="../scripts/leetcode_fetcher.js">
+      const submitBtn = document.getElementById("submit-btn");
+      const usernameInput = document.getElementById("username");
+      const resultEl = document.getElementById("result");
+  
+      submitBtn.addEventListener("click", async () => {
+        const username = usernameInput.value;
+        const data = await fetchProfileData(username);
+        if (data) {
+          resultEl.innerHTML = `
+          <p>Username: ${data.username}</p>
+          <p>Submit Counts: ${JSON.stringify(data.submitCounts)}</p>
+          <p>Beats Percentage: ${JSON.stringify(data.beatsPercentage)}</p>
+          `;
+        } else {
+          resultEl.innerHTML = "No data found.";
+        }
+      });
+    </script>
+  </body>
+
+</html>

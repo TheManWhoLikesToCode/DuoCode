@@ -1,0 +1,39 @@
+[
+  {
+    "date": "2023-01-31T02:16:34.159Z",
+    "allQuestionsCount": [
+      {
+        "difficulty": "All",
+        "count": 2552
+      },
+      {
+        "difficulty": "Easy",
+        "count": 624
+      },
+      {
+        "difficulty": "Medium",
+        "count": 1358
+      },
+      {
+        "difficulty": "Hard",
+        "count": 570
+      }
+    ],
+    "profiles": [
+      {
+        "username": "TheManWhoLikesToCode",
+        "submitCounts": {
+          "All": 92,
+          "Easy": 69,
+          "Medium": 22,
+          "Hard": 1
+        },
+        "beatsPercentage": {
+          "Easy": 84.52,
+          "Medium": 58.93,
+          "Hard": null
+        }
+      }
+    ]
+  }
+]
